@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180406 18:47:12.857" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="D:\eclipse-workspace\robotautomation" id="s1" name="Robotautomation">
+<suite source="D:\eclipse-workspace\robotautomation\src" id="s1-s1" name="Src">
+<suite source="D:\eclipse-workspace\robotautomation\src\test" id="s1-s1-s1" name="Test">
+<suite source="D:\eclipse-workspace\robotautomation\src\test\Test Cases" id="s1-s1-s1-s1" name="Test Cases">
+<suite source="D:\eclipse-workspace\robotautomation\src\test\Test Cases\Sanitysuite.robot" id="s1-s1-s1-s1-s1" name="Sanitysuite">
+<test id="s1-s1-s1-s1-s1-t1" name="Verify Locomotive Data of tenant2 is not visible in tenant1">
+<kw name="Login EdgeLINC" library="commons">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${edgelincURL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180406 18:47:13.178" level="INFO">Opening browser 'chrome' to base url 'http://ui-dev-edgelinc.trans.ge.com'</msg>
+<status status="PASS" endtime="20180406 18:47:25.862" starttime="20180406 18:47:13.177"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180406 18:47:26.992" starttime="20180406 18:47:25.864"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20180406 18:47:56.993" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" endtime="20180406 18:47:56.994" starttime="20180406 18:47:26.993"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id='login-box']/header/div</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:47:57.052" starttime="20180406 18:47:56.996"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginNameField1}</arg>
+<arg>${LoginName}</arg>
+</arguments>
+<msg timestamp="20180406 18:47:57.053" level="INFO">Typing text 'prox_admin' into text field '//*[@id='login-box-inner']/div[1]/div/form/div[1]/input'</msg>
+<status status="PASS" endtime="20180406 18:47:57.204" starttime="20180406 18:47:57.052"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LoginPWDField1}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20180406 18:47:57.205" level="INFO">Typing text 'pf@5ecret' into text field '//*[@id='login-box-inner']/div[1]/div/form/div[2]/input'</msg>
+<status status="PASS" endtime="20180406 18:47:57.339" starttime="20180406 18:47:57.205"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${LoginSubmitField1}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:47:57.364" starttime="20180406 18:47:57.340"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginSubmitField1}</arg>
+</arguments>
+<msg timestamp="20180406 18:47:57.366" level="INFO">Clicking element '//*[@id='login-box-inner']/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" endtime="20180406 18:47:57.439" starttime="20180406 18:47:57.365"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>40s</arg>
+</arguments>
+<msg timestamp="20180406 18:48:37.441" level="INFO">Slept 40 seconds</msg>
+<status status="PASS" endtime="20180406 18:48:37.443" starttime="20180406 18:47:57.440"></status>
+</kw>
+<status status="PASS" endtime="20180406 18:48:37.446" starttime="20180406 18:47:13.176"></status>
+</kw>
+<kw name="Go to Locomotive Management Page" library="commons">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>40s</arg>
+</arguments>
+<msg timestamp="20180406 18:49:17.453" level="INFO">Slept 40 seconds</msg>
+<status status="PASS" endtime="20180406 18:49:17.455" starttime="20180406 18:48:37.452"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Edgelinclogo}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:17.505" starttime="20180406 18:49:17.457"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SideBar}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:17.524" starttime="20180406 18:49:17.505"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${MgmntTab_SideBar}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:17.559" starttime="20180406 18:49:17.524"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MgmntTab_SideBar}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:17.560" level="INFO">Clicking element '//*[@id='sidebar-nav']//*[text()='Management']'.</msg>
+<status status="PASS" endtime="20180406 18:49:17.626" starttime="20180406 18:49:17.559"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LocomotiveMgmntTab_SideBar}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:17.628" level="INFO">Clicking element '//*[@id='sidebar-nav']//*[text()='Locomotive Mgmt']'.</msg>
+<status status="PASS" endtime="20180406 18:49:17.972" starttime="20180406 18:49:17.627"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${LocomotiveManagement}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:18.012" starttime="20180406 18:49:17.974"></status>
+</kw>
+<status status="PASS" endtime="20180406 18:49:18.013" starttime="20180406 18:48:37.447"></status>
+</kw>
+<kw name="Locomotive Data Visibility" library="Feature">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${locomgmt_locoid}</arg>
+<arg>${locoidvalue}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:18.015" level="INFO">Typing text '14' into text field '//input[@type='number']'</msg>
+<status status="PASS" endtime="20180406 18:49:18.120" starttime="20180406 18:49:18.014"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${locoidtovalue}</arg>
+<arg>${locoidvalue}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:18.121" level="INFO">Typing text '14' into text field '//*[@id='content-wrapper']/div[1]/div/div/div[2]/div/systems-list/div/div/div[1]/header/div/div[3]/div/div/div/filters/form/systems-filters/div[2]/div[2]/div/input'</msg>
+<status status="PASS" endtime="20180406 18:49:18.217" starttime="20180406 18:49:18.121"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180406 18:49:28.218" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180406 18:49:28.219" starttime="20180406 18:49:18.218"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${locomgmtsearchbox}</arg>
+<arg>${custidvalue}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:28.225" level="INFO">Typing text 'BLE' into text field 'xpath=(//input[@type='text'])[5]'</msg>
+<status status="PASS" endtime="20180406 18:49:28.358" starttime="20180406 18:49:28.222"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180406 18:49:38.359" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180406 18:49:38.360" starttime="20180406 18:49:28.359"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${locoid_unavailable}</arg>
+</arguments>
+<assign>
+<var>${locoid_unavailablemessage}</var>
+</assign>
+<msg timestamp="20180406 18:49:38.450" level="INFO">${locoid_unavailablemessage} = No system in the setup</msg>
+<status status="PASS" endtime="20180406 18:49:38.451" starttime="20180406 18:49:38.363"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${locounavailablemessage_expected}</arg>
+<arg>${locoid_unavailablemessage}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:38.452" starttime="20180406 18:49:38.451"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Loco Data visibility is working fine</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:38.453" starttime="20180406 18:49:38.452"></status>
+</kw>
+<status status="PASS" endtime="20180406 18:49:38.454" starttime="20180406 18:49:18.013"></status>
+</kw>
+<kw name="Logout EdgeLINC" library="commons">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>${ScrollUp}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:38.455" level="INFO">Executing JavaScript:
+window.scrollTo(document.body.scrollHeight,0)</msg>
+<status status="PASS" endtime="20180406 18:49:38.461" starttime="20180406 18:49:38.455"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MyProfileTab}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:38.462" level="INFO">Clicking element '//li[2]/a/span'.</msg>
+<status status="PASS" endtime="20180406 18:49:38.549" starttime="20180406 18:49:38.462"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${LogoutLink}</arg>
+</arguments>
+<status status="PASS" endtime="20180406 18:49:38.626" starttime="20180406 18:49:38.550"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LogoutLink}</arg>
+</arguments>
+<msg timestamp="20180406 18:49:38.628" level="INFO">Clicking element 'link=Logout'.</msg>
+<status status="PASS" endtime="20180406 18:49:38.761" starttime="20180406 18:49:38.627"></status>
+</kw>
+<status status="PASS" endtime="20180406 18:49:38.762" starttime="20180406 18:49:38.454"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180406 18:49:41.852" starttime="20180406 18:49:38.763"></status>
+</kw>
+<status status="PASS" endtime="20180406 18:49:41.855" critical="yes" starttime="20180406 18:47:13.174"></status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status status="PASS" endtime="20180406 18:49:41.859" starttime="20180406 18:47:12.923"></status>
+</suite>
+<status status="PASS" endtime="20180406 18:49:41.871" starttime="20180406 18:47:12.920"></status>
+</suite>
+<status status="PASS" endtime="20180406 18:49:41.880" starttime="20180406 18:47:12.917"></status>
+</suite>
+<status status="PASS" endtime="20180406 18:49:41.888" starttime="20180406 18:47:12.914"></status>
+</suite>
+<status status="PASS" endtime="20180406 18:49:41.894" starttime="20180406 18:47:12.889"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Robotautomation" pass="1">Robotautomation</stat>
+<stat fail="0" id="s1-s1" name="Src" pass="1">Robotautomation.Src</stat>
+<stat fail="0" id="s1-s1-s1" name="Test" pass="1">Robotautomation.Src.Test</stat>
+<stat fail="0" id="s1-s1-s1-s1" name="Test Cases" pass="1">Robotautomation.Src.Test.Test Cases</stat>
+<stat fail="0" id="s1-s1-s1-s1-s1" name="Sanitysuite" pass="1">Robotautomation.Src.Test.Test Cases.Sanitysuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
